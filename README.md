@@ -3,7 +3,35 @@
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.7%2B-3776ab?style=for-the-badge&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.8.0-ee4c2c?style=f### 🔬 Technical Details
+![PyTorch](https://img.shields.io/badge/PyTorch-2.8.0-ee4c2c?style=for-the-badge&logo=pytorch&logoColor=white)
+![Transformers](https://img.shields.io/badge/🤗%20Transformers-4.57.0-ffca28?style=for-the-badge)
+![CUDA](https://img.shields.io/badge/CUDA-Compatible-76b900?style=for-the-badge&logo=nvidia)
+![License](https://img.shields.io/badge/License-MIT-00d4aa?style=for-the-badge)
+
+![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)
+![Accuracy](https://img.shields.io/badge/Accuracy-99.28%25-brightgreen?style=for-the-badge)
+![F1 Score](https://img.shields.io/badge/F1%20Score-97.35%25-brightgreen?style=for-the-badge)
+![Dataset](https://img.shields.io/badge/Dataset-5,572%20SMS-blue?style=for-the-badge)
+
+![Pandas](https://img.shields.io/badge/Pandas-2.3.2-150458?style=flat-square&logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-2.3.3-013243?style=flat-square&logo=numpy)
+![Scikit Learn](https://img.shields.io/badge/scikit--learn-1.7.2-F7931E?style=flat-square&logo=scikit-learn)
+![Optuna](https://img.shields.io/badge/Optuna-4.5.0-3776ab?style=flat-square)
+![NLTK](https://img.shields.io/badge/NLTK-3.9.2-154f3c?style=flat-square)
+![SpaCy](https://img.shields.io/badge/spaCy-3.8.7-09a3d5?style=flat-square)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.10.7-11557c?style=flat-square)
+![Seaborn](https://img.shields.io/badge/Seaborn-0.13.2-444876?style=flat-square)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?style=flat-square&logo=jupyter)
+
+*A state-of-the-art SMS spam detection system using DistilBERT with advanced preprocessing and hyperparameter optimization.*
+
+[📚 Documentation](#-documentation) • [🚀 Quick Start](#-quick-start) • [📈 Performance](#-performance) • [🤝 Contributing](#-contributing)
+
+</div>
+
+---
+
+## 🔬 Technical Details
 
 ### Model Architecture
 
@@ -32,31 +60,9 @@ graph TD
 pie title Model Size Comparison
     "DistilBERT (Our Model)" : 66
     "BERT Base" : 110
-```e&logo=pytorch&logoColor=white)
-![Transformers](https://img.shields.io/badge/🤗%20Transformers-4.57.0-ffca28?style=for-the-badge)
-![CUDA](https://img.shields.io/badge/CUDA-Compatible-76b900?style=for-the-badge&logo=nvidia)
-![License](https://img.shields.io/badge/License-MIT-00d4aa?style=for-the-badge)
+```
 
-![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)
-![Accuracy](https://img.shields.io/badge/Accuracy-99.28%25-brightgreen?style=for-the-badge)
-![F1 Score](https://img.shields.io/badge/F1%20Score-97.35%25-brightgreen?style=for-the-badge)
-![Dataset](https://img.shields.io/badge/Dataset-5,572%20SMS-blue?style=for-the-badge)
-
-![Pandas](https://img.shields.io/badge/Pandas-2.3.2-150458?style=flat-square&logo=pandas)
-![NumPy](https://img.shields.io/badge/NumPy-2.3.3-013243?style=flat-square&logo=numpy)
-![Scikit Learn](https://img.shields.io/badge/scikit--learn-1.7.2-F7931E?style=flat-square&logo=scikit-learn)
-![Optuna](https://img.shields.io/badge/Optuna-4.5.0-3776ab?style=flat-square)
-![NLTK](https://img.shields.io/badge/NLTK-3.9.2-154f3c?style=flat-square)
-![SpaCy](https://img.shields.io/badge/spaCy-3.8.7-09a3d5?style=flat-square)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.10.7-11557c?style=flat-square)
-![Seaborn](https://img.shields.io/badge/Seaborn-0.13.2-444876?style=flat-square)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?style=flat-square&logo=jupyter)
-
-*A state-of-the-art SMS spam detection system using DistilBERT with advanced preprocessing and hyperparameter optimization.*
-
-[📚 Documentation](#-documentation) • [🚀 Quick Start](#-quick-start) • [📈 Performance](#-performance) • [🤝 Contributing](#-contributing)
-
-</div>
+---
 
 <div align="center">
 
@@ -79,9 +85,11 @@ graph TD
     C1 --> C2[Feature Extraction]
     C2 --> C3[Attention Mechanism]
     end
+```
+
 </div>
 
-```
+---
 
 ## 🔄 Project Workflow
 
