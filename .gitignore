@@ -1,0 +1,19 @@
+# Model files
+*.pt
+*.pth
+*.h5
+*.model
+*.weights
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment
+.env
+venv/
+env/
