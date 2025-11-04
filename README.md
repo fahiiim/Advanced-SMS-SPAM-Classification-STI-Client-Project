@@ -32,6 +32,16 @@
 ---
 
 ## 🔬 Technical Details
+### Why this project is "advanced" for mobile apps
+
+This implementation targets practical mobile deployment without sacrificing accuracy:
+
+- Distillation & small base model: DistilBERT retains ~97% of BERT performance with ≈40% fewer parameters (≈66M vs 110M), simplifying on-device memory use.
+- Limited fine-tuning footprint: Only last transformer layers + classifier are trainable, reducing retraining cost and enabling lightweight updates.
+- Export-ready paths: TorchScript and ONNX export scripts are included to convert models for Android/iOS (via PyTorch Mobile / ONNX Runtime Mobile).
+- Quantization & pruning support: Model and training design allow 8-bit quantization and structured pruning with minimal accuracy loss.
+- Low-latency considerations: batching, input length cap (128 tokens), attention caching and optimized tokenization reduce per-message inference time.
+- Explainability: attention maps provide diagnostic signals for mobile A/B testing and on-device explainability features.
 
 ### Model Architecture
 
@@ -91,20 +101,21 @@ graph TD
 
 ---
 
-## 🔄 Project Workflow
+## 🔄 Project Workflow (professional palette)
+
 
 ```mermaid
 graph LR
     A[Data Collection] --> B[Preprocessing]
     B --> C[Model Training]
     C --> D[Evaluation]
-    D --> E[Deployment]
+    D --> E[Deployment & Export]
     
-    style A fill:#f9d71c
-    style B fill:#87ceeb
-    style C fill:#ff9999
-    style D fill:#90ee90
-    style E fill:#dda0dd
+    style A fill:#FF6A00,stroke:#000000,color:#ffffff
+    style B fill:#0052CC,stroke:#000000,color:#ffffff
+    style C fill:#4C4C4C,stroke:#000000,color:#ffffff
+    style D fill:#00A14B,stroke:#000000,color:#ffffff
+    style E fill:#6C757D,stroke:#000000,color:#ffffff
 ```
 
 ---
@@ -115,20 +126,24 @@ graph LR
 
 ```mermaid
 flowchart LR
-    A[Raw SMS] --> B[Text Normalization]
-    B --> C[Abbreviation Handling]
-    C --> D[Pattern Detection]
-    D --> E[Emoji Processing]
-    E --> F[Stop Word Filtering]
-    F --> G[Processed Text]
+    Raw[Raw SMS] --> Clean[Lowercase & Trim]
+    Clean --> Mask[URL / Email / Phone Masking]
+    Mask --> Abbrev[Abbreviation Expansion]
+    Abbrev --> Repeat[Repeated-char normalization]
+    Repeat --> Emoji[Emoji normalization -> <emoji>]
+    Emoji --> Token[Tokenization & Lemmatization]
+    Token --> Stop[Selective Stopword Filtering]
+    Stop --> Output[Processed Text]
 
-    style A fill:#ffcccb
-    style B fill:#90ee90
-    style C fill:#87ceeb
-    style D fill:#dda0dd
-    style E fill:#f9d71c
-    style F fill:#ff9999
-    style G fill:#98fb98
+    style Raw fill:#FF6A00,stroke:#000000,color:#ffffff
+    style Clean fill:#00B4D8,stroke:#000000,color:#000000
+    style Mask fill:#333333,stroke:#000000,color:#ffffff
+    style Abbrev fill:#00A14B,stroke:#000000,color:#ffffff
+    style Repeat fill:#6C757D,stroke:#000000,color:#ffffff
+    style Emoji fill:#FF6A00,stroke:#000000,color:#ffffff
+    style Token fill:#00B4D8,stroke:#000000,color:#000000
+    style Stop fill:#333333,stroke:#000000,color:#ffffff
+    style Output fill:#ffffff,stroke:#000000,color:#000000
 ```
 
 #### Processing Steps:
@@ -447,6 +462,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*Made with ❤️ by the open source community*
+*Made by Md. Fahim Sarker Mridul*
 
 </div>
